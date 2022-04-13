@@ -1,18 +1,19 @@
+Algorithm String_treatment
 var sentence:string;
 
 var len:int;
 
-var string [] words;
-
+var  words:integer;
+var wordsArr :ARRAY_OF string[];
 var cmpt=0;
-
+begin
 repeat{
 
-ecrire("veuilez saisir une phrase complète");
+ecrire("veuilez saisir une phrase qui se termine avec un point");
 
 lire(sentence);
 
-if((sentence.indexOf('.')<>-1)or(sentence!=null){
+while((sentence.indexOf('.')<>-1)or(sentence!=null)do{
 //replace multiple spaces by a single one
 
 sentence := sentence.replace(/  +/g, ' ');
@@ -28,9 +29,9 @@ ecrire ("the number of words in the sentence is : "+words);
 
 wordsArr:=sentence.split(' ');
 
-for var i=0 , i<wordsArr.length , i++ {
+for var ifrom 0 to i<wordsArr.length step  i++ do{
 
-for var j =0,j<wordsArr[i].length,j++{
+for var j form 0 to j<wordsArr[i].length step j++ do{
 
 if (wordsArr[i].charAt(j).match(/[aeiou]/gi)){
 
@@ -39,3 +40,4 @@ cmpt++;}
 }
 }
 ecrire("the sentence includes"+cmpt+"vowels");
+end
