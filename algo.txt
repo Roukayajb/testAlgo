@@ -29,9 +29,9 @@ ecrire ("the number of words in the sentence is : "+words);
 
 wordsArr:=sentence.split(' ');
 
-for var ifrom 0 to i<wordsArr.length step  i++ do{
+for var ifrom 0 to i<wordsArr.length  do{
 
-for var j form 0 to j<wordsArr[i].length step j++ do{
+for var j form 0 to j<wordsArr[i].length  do{
 
 if (wordsArr[i].charAt(j).match(/[aeiou]/gi)){
 
