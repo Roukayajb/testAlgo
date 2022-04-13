@@ -1,0 +1,41 @@
+var sentence:string;
+
+var len:int;
+
+var string [] words;
+
+var cmpt=0;
+
+repeat{
+
+ecrire("veuilez saisir une phrase complète");
+
+lire(sentence);
+
+if((sentence.indexOf('.')<>-1)or(sentence!=null){
+//replace multiple spaces by a single one
+
+sentence := sentence.replace(/  +/g, ' ');
+
+len :=sentence.length;
+
+ecrire("the length of the sentence is"+len);
+//take every words apart 
+
+words = sentence.split(' ').length
+
+ecrire ("the number of words in the sentence is : "+words);
+
+wordsArr:=sentence.split(' ');
+
+for var i=0 , i<wordsArr.length , i++ {
+
+for var j =0,j<wordsArr[i].length,j++{
+
+if (wordsArr[i].charAt(j).match(/[aeiou]/gi)){
+
+cmpt++;}
+
+}
+}
+ecrire("the sentence includes"+cmpt+"vowels");
